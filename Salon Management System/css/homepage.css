@@ -1,0 +1,333 @@
+/* =======================
+   Homepage Specific Styles
+   ======================== */
+
+/* --- Hero Section --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/salon-hero-bg.jpg'); /* Assumes you have a background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.btn-large {
+    font-size: 1.15rem;
+    padding: 14px 28px;
+}
+
+/* --- Home Sections --- */
+.home-section {
+    padding: 60px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.home-section p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* --- Homepage Service Grid --- */
+.home-services {
+    /* Limit to 3 columns for the homepage preview */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+/* Simplified service card for homepage */
+.home-services .service-card-content {
+    padding: 25px;
+}
+.home-services .service-card-content .service-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* Secondary button style */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Stylist Preview --- */
+.stylist-preview-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stylist-preview-card {
+    text-align: center;
+}
+
+.stylist-preview-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: var(--card-shadow);
+}
+
+.stylist-preview-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.stylist-preview-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+/* =======================
+   About Us Section
+   ======================== */
+.about-us-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    align-items: center;
+    text-align: left; /* Override the .text-center from other sections */
+    background-color: var(--secondary-color); /* Light background to stand out */
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    margin-bottom: 60px;
+}
+
+.about-us-content h2 {
+    text-align: left; /* Keep h2 left-aligned */
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    text-align: left; /* Keep p left-aligned */
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* =======================
+   Contact Support Banner (Advertisement Style)
+   ======================== */
+.contact-support-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8B4A9C 100%);
+    color: #fff;
+    padding: 50px 20px;
+    margin: 60px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-support-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+}
+
+.support-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.support-icon {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.support-icon svg {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.support-text {
+    flex: 1;
+}
+
+.support-text h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.support-text p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.support-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-link {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.contact-subtext {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* --- Responsive for mobile --- */
+@media (max-width: 768px) {
+    .about-us-section {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+    }
+    
+    .about-us-image {
+        grid-row: 1; /* Move the image to the top on mobile */
+        margin-bottom: 20px;
+    }
+    
+    .about-us-content h2,
+    .about-us-content p {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .contact-support-banner {
+        padding: 40px 20px;
+        margin: 40px 0 0 0;
+    }
+
+    .support-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .support-icon {
+        margin: 0 auto;
+    }
+
+    .support-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .support-text p {
+        font-size: 1rem;
+    }
+
+    .support-contact {
+        width: 100%;
+    }
+
+    .contact-item {
+        text-align: center;
+    }
+
+    .contact-link {
+        font-size: 1.1rem;
+    }
+}

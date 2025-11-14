@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed! - Velvet Touch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmation.css"> </head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Velvet Touch</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="login.html">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            
+            <div class="success-icon-wrapper">
+                <div class="success-icon-circle">
+                    <div class="success-icon-check"></div>
+                </div>
+            </div>
+
+            <h1>Booking Confirmed!</h1>
+            
+            <p class="confirmation-message">
+                Thank you! Your appointment is successfully booked.
+                A confirmation email and SMS have been sent to you. (FR 3.2.7)
+            </p>
+
+            <div class="booking-summary-box">
+                <h3>Your Appointment Details</h3>
+                <div class="summary-item">
+                    <span>Booking ID:</span>
+                    <span id="summary-booking-id">BK-184592</span>
+                </div>
+                <div class="summary-item">
+                    <span>Service:</span>
+                    <span id="summary-service">Women's Haircut</span>
+                </div>
+                <div class="summary-item">
+                    <span>Stylist:</span>
+                    <span id="summary-stylist">Anna</span>
+                </div>
+                <div class="summary-item">
+                    <span>Date & Time:</span>
+                    <span id="summary-datetime">Nov 15, 2025 at 11:00 AM</span>
+                </div>
+            </div>
+
+            <a href="dashboard.html" class="btn btn-primary">Go to My Appointments</a>
+            <a href="index.html" class="link-back-home">Back to Home</a>
+
+        </div> </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Velvet Touch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Js/mock-data.js"></script>
+    <script src="Js/confirmation.js"></script>
+</body>
+</html>

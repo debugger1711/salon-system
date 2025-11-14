@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Velvet Touch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.png" alt="Velvet Touch Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-user">
+                <h4 id="welcome-user">Welcome, [User]!</h4>
+                <span id="user-role-badge">Admin</span>
+            </div>
+            
+            <nav class="sidebar-nav" id="admin-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="page-admin-dashboard">Dashboard</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-admin-services">Manage Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-admin-users">Manage Users</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-admin-bookings">Manage Bookings</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-admin-reports">Generate Reports</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sidebar-nav" id="stylist-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="page-stylist-calendar">My Calendar</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-stylist-availability">Manage Availability</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-stylist-profile">My Profile</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sidebar-nav" id="customer-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="page-customer-appointments">My Appointments</a></li>
+                    <li><a href="#" class="nav-link" data-page="page-customer-profile">My Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-content">
+            
+            <div class="dashboard-page active" id="page-admin-dashboard">
+                <h2>Admin Dashboard</h2>
+                <p>Welcome to the admin control panel. You can manage all parts of the salon from here.</p>
+            </div>
+
+            <div class="dashboard-page" id="page-admin-services">
+                <h2>Manage Services (FR 3.2.5)</h2>
+                </div>
+            
+            <div class="dashboard-page" id="page-admin-users"><h2>Manage Users</h2></div>
+            <div class="dashboard-page" id="page-admin-bookings"><h2>Manage Bookings</h2></div>
+            <div class="dashboard-page" id="page-admin-reports"><h2>Generate Reports</h2></div>
+            <div class="dashboard-page" id="page-stylist-calendar"><h2>My Calendar</h2></div>
+            <div class="dashboard-page" id="page-stylist-availability"><h2>Manage Availability</h2></div>
+            <div class="dashboard-page" id="page-stylist-profile"><h2>My Profile</h2></div>
+
+
+            <div class="dashboard-page" id="page-customer-appointments">
+                <h2>My Appointments</h2>
+                <h3>Upcoming</h3>
+                <table class="data-table">
+                    <thead><tr><th>Service</th><th>Stylist</th><th>Date</th><th>Time</th><th>Action</th></tr></thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <h3>Past</h3>
+                <table class="data-table">
+                    <thead><tr><th>Service</th><th>Stylist</th><th>Date</th><th>Time</th><th>Action</th></tr></thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="dashboard-page" id="page-customer-profile">
+                <h2>My Profile</h2>
+                <div class="profile-form-container">
+                    <div class="form-group">
+                        <label for="profile-name">Full Name</label>
+                        <input type="text" id="profile-name" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email</label>
+                        <input type="email" id="profile-email" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-phone">Phone</label>
+                        <input type="tel" id="profile-phone" readonly>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="feedback-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+            <h3>Leave Feedback</h3>
+            <p>You are reviewing: <strong id="modal-service-name">Service Name</strong></p>
+            
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-text">Your Feedback</label>
+                    <textarea id="feedback-text" rows="4" placeholder="Tell us about your experience..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full-width">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/mock-data.js"></script>
+    <script src="js/dashboard.js"></script> 
+</body>
+</html>
