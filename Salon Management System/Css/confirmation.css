@@ -1,0 +1,103 @@
+/* =======================
+   Confirmation Page Styles
+   ======================== */
+
+/* Use main to center the content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    min-height: 80vh;
+}
+
+.confirmation-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.confirmation-container h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.confirmation-message {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- Summary Box --- */
+.booking-summary-box {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.booking-summary-box h3 {
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* Re-using summary styles from booking page */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.summary-item span:first-child {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.summary-item span:last-child {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+
+/* --- Call to Action Buttons --- */
+.confirmation-container .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.link-back-home {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- CSS-Only Success Icon --- */
+.success-icon-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.success-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #e4f8f0; /* Light green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.success-icon-check {
+    width: 25px;
+    height: 45px;
+    border-bottom: 6px solid #28a745; /* Green checkmark */
+    border-right: 6px solid #28a745;
+    transform: rotate(45deg);
+}

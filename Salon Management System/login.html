@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - Velvet Touch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Velvet Touch</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="login.html" class="active">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="form-toggle">
+                <button id="show-login-btn" class="active">Login</button>
+                <button id="show-register-btn">Register</button>
+            </div>
+
+            <form id="login-form" action="/dashboard.html" method="GET">
+                <h3>Welcome Back</h3>
+                
+                <div class="form-group">
+                    <label for="login-email">Email or Mobile</label>
+                    <input type="text" id="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Login</button>
+            </form>
+
+            <form id="register-form" action="/dashboard.html" method="POST">
+                <h3>Create Your Account</h3>
+                
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-mobile">Mobile Number</label>
+                    <input type="tel" id="register-mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">Create Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Register & Send OTP</button>
+            </form>
+
+        </div> </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Velvet Touch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Js/auth.js"></script>
+
+</body>
+</html>

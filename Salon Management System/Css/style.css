@@ -1,0 +1,497 @@
+/* =======================
+   Global Styles & Variables
+   ======================== */
+:root {
+    --primary-color: #8a4fff; /* A nice modern purple */
+    --secondary-color: #f4f1f8; /* Light background */
+    --text-dark: #333;
+    --text-light: #777;
+    --border-color: #eee;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* =======================
+   Navigation Bar
+   ======================== */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    font-weight: 500;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--primary-color);
+}
+
+/* =======================
+   Buttons
+   ======================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #703dcc;
+}
+
+/* =======================
+   Page Header
+   ======================== */
+.page-header {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* =======================
+   Filter Bar (FR 3.2.8)
+   ======================== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 20px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+}
+
+.filter-group {
+    flex: 1; /* Each group tries to take equal space */
+    min-width: 200px; /* Prevents them from getting too small */
+}
+
+.filter-group.search-group {
+    flex: 2; /* Make search bar twice as wide */
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.filter-group input[type="search"],
+.filter-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+/* =======================
+   Services Grid (FR 3.2.2)
+   ======================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image from stretching */
+}
+
+.service-card-content {
+    padding: 20px;
+}
+
+.service-card-content .service-title {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card-content .service-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    min-height: 40px; /* Ensures cards align nicely */
+}
+
+.service-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.service-price {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.service-duration {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.service-card-content .btn {
+    width: 100%; /* Makes button fill the card width */
+    text-align: center;
+}
+
+/* =======================
+   Footer
+   ======================== */
+.footer {
+    background-color: var(--text-dark);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+/* =======================
+   Booking Page Layout
+   ======================== */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 for steps, 1/3 for summary */
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.booking-step {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+.booking-step:last-of-type {
+    border-bottom: none;
+}
+
+.booking-step h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- Step 1: Service --- */
+#service-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+/* --- Step 2: Stylist --- */
+.stylist-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.stylist-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stylist-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.stylist-card span {
+    font-weight: 600;
+    display: block;
+}
+
+/* Hide the radio button */
+.stylist-card input[type="radio"] {
+    display: none;
+}
+
+/* Style for selected stylist */
+.stylist-card input[type="radio"]:checked + img + span {
+    color: var(--primary-color);
+}
+.stylist-card:has(input[type="radio"]:checked) {
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* --- Step 3: Date & Time --- */
+#date-picker {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.time-slot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.time-slot {
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+    border-color: var(--primary-color);
+}
+
+.time-slot.selected {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.time-slot.disabled {
+    background-color: var(--secondary-color);
+    color: #aaa;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* =======================
+   Booking Summary Sidebar
+   ======================== */
+.booking-summary {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    position: sticky; /* Makes summary stick on scroll */
+    top: 100px; /* 80px navbar + 20px spacing */
+    height: fit-content; /* Only as tall as its content */
+}
+
+.booking-summary h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.summary-item, .summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 15px 0;
+}
+
+.summary-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.booking-summary hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.booking-summary .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =======================
+   Responsive (Mobile)
+   ======================== */
+@media (max-width: 768px) {
+    .booking-layout {
+        /* Stack columns on mobile */
+        grid-template-columns: 1fr;
+    }
+
+    .booking-summary {
+        position: static; /* Don't stick on mobile */
+        grid-row: 1; /* Move summary to the top on mobile */
+        margin-bottom: 40px;
+    }
+
+    .time-slot-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* =======================
+   Payment Page Styles
+   ======================== */
+
+.payment-details {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.payment-details h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+/* We can reuse the form-group style from login.css if it's in style.css */
+/* If not, add these: */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+/* For side-by-side Expiry and CVC fields */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group.half-width {
+    flex: 1; /* Each takes 50% of the space */
+}
+
+.payment-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.btn-full-width {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+/* =======================
+   Logo Sizing
+   ======================== */
+.navbar-brand img {
+    height: 50px; /* Adjust this value to make your logo bigger or smaller */
+    width: auto;  /* Keeps the original shape */
+    display: block; /* Fixes any weird spacing */
+}

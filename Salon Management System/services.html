@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Velvet Touch</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Velvet Touch</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="login.html">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <section class="page-header">
+                <h1>Explore Our Services</h1>
+                <p>Find the perfect treatment to make you feel your best.</p>
+            </section>
+
+            <section class="filter-bar">
+                <div class="filter-group search-group">
+                    <label for="search-box">Search</label>
+                    <input type-="search" id="search-box" placeholder="e.g., 'Haircut' or 'Facial'">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-category">Filter by Category</label>
+                    <select id="filter-category">
+                        <option value="all">All Categories</option>
+                        <option value="hair">Hair</option>
+                        <option value="skin">Skin Care</option>
+                        <option value="nails">Nails</option>
+                        <option value="spa">Spa & Massage</option>
+                    </select>
+                </div>
+            </section>
+
+            <section id="services-grid" class="services-grid">
+                
+                <article class="service-card" data-category="hair">
+                    <img src="assets/images/service-haircut.jpg" alt="Woman getting a haircut">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Women's Haircut & Style</h3>
+                        <p class="service-description">A professional cut and style tailored to you.</p>
+                        <div class="service-details">
+                            <span class="service-price">₹800</span>
+                            <span class="service-duration">60 min</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </article>
+
+                <article class="service-card" data-category="skin">
+                    <img src="assets/images/service-facial.jpg" alt="Person receiving a facial">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Classic Facial</h3>
+                        <p class="service-description">Deep cleansing, exfoliation, and hydration.</p>
+                        <div class="service-details">
+                            <span class="service-price">₹1200</span>
+                            <span class="service-duration">45 min</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </article>
+
+                <article class="service-card" data-category="hair">
+                    <img src="assets/images/service-haircut-men.jpg" alt="Man getting a haircut">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Men's Haircut</h3>
+                        <p class="service-description">A sharp, clean cut from our expert barbers.</p>
+                        <div class="service-details">
+                            <span class="service-price">₹450</span>
+                            <span class="service-duration">30 min</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </article>
+
+            </section>
+
+        </div> </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Velvet Touch. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
